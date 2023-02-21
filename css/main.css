@@ -1,0 +1,136 @@
+/* css 작성하기
+1. css reset 
+    -구글 reset css 검색 복붙 >>> 크기 여백 초기화
+    -normalize css 다운로드 >>> 크로스브라우징 
+
+2. Font 확인 및 변환
+    -raleway bold, regure
+    -alegreya sans regure
+
+3. 공통 요소 css 스타일
+    -페이지의 큰 틀을 잡아주는 layout
+    -typography
+    -link & buttom 스타일
+    -form 요소들
+
+4. 주요 파트별 css 작성 */
+
+/* 
+주의!!
+@import 로 불러오는 코드들은 다른 코드들 중간에 있으면 안돼고 
+최상단에 위치해야한다 
+*/
+
+@import url('normalize.css');
+@import url('reset.css');
+/* reset css, normalize css 를 import 불러오기 한다 */
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Raleway:wght@400;700&display=swap');
+/* 
+css 유형도 함께 복사해 둔다 (구글 폰트에서 복사)
+font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Raleway', sans-serif; 
+*/
+
+/* ------------------------------------------------------------
+공통 css 잡기 >>> 양이 많을떄는 common.css 로 따로 분류하기도 한다 
+---------------------------------------------------------------*/
+
+/* ----------------------- LAYOUT ----------------------- */
+.container {
+    width: 1300px;
+    margin: 0 auto;
+}
+body {
+    background: #1d1d1d;
+    color: #fff;
+}
+
+/* ----------------------- TYPOGRAPHY ----------------------- */
+body {
+    font: 16px/28px 'Raleway', sans-serif;
+    /* 폰트 사이즈/라인하이트 폰트 패밀리를 한번에 작성해줄 수 있다 */
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+/* ----------------------- LINK & BUTTON ----------------------- */
+.btn {
+    border: 1px solid #6b4922;
+    padding: 0 42px;
+    line-height: 53px;
+    color: #ab7835;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    background: none;
+}
+
+/* ----------------------- FORM ----------------------- */
+label {
+    display: none;
+}
+input {
+    border: none;
+    line-height: 53px;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    display: inline-block;
+    padding: 0 8px;
+    background: none;
+}
+textarea {
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    display: inline-block;
+    padding: 0 8px;
+    background: none;
+    min-height: 110px;
+}
+
+
+/* ----------------------- HEADER ----------------------- */
+header {
+    height: 100vh;
+    background: url(../images/header_bg.jpg) no-repeat center top/cover;
+    position: relative;
+}
+header .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 964px;
+    border: 10px solid #ab7835;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 77px 0 90px;
+    color: #fff;
+}
+header .slogan h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 97px;
+    font-weight: bold;
+}
+header .slogan h2:after {
+    content: " ";
+    position: absolute;
+    width: 91px;
+    height: 3px;    
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 32px;
+}
+header .slogan h1 {
+    font-size: 180px;
+    line-height: 126px;
+    margin-bottom: 56px;
+}
+header .slogan p {
+    font-size: 24px;
+    font-weight: bold;    
+    text-transform: uppercase;
+}
