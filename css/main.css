@@ -45,6 +45,9 @@ body {
     background: #1d1d1d;
     color: #fff;
 }
+.shadow {
+    box-shadow: 0px 0px 80px rgba(0,0,0,.3);
+}
 
 /* ----------------------- TYPOGRAPHY ----------------------- */
 body {
@@ -135,7 +138,7 @@ header .slogan p {
     text-transform: uppercase;
 }
 
-/* ----------------------- MAIN ----------------------- */
+/* ----------------------- ABOUT US ----------------------- */
 .about_us {
     background: #373737;
     padding: 70px 67px 80px;
@@ -175,4 +178,78 @@ header .slogan p {
 /* nth-of child 를 쓰면 h2 또한 포함되기 때문에 nth-of-type 을 써야한다 */
 .about_us p:last-of-type {
     margin-bottom: 0;
+}
+
+/* ----------------------- LATEST ARTICLE ----------------------- */
+.latest_articles {
+    position: relative;
+    padding-top: 150px;
+}
+.latest_articles > h2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.latest_articles ul {
+    margin-bottom: 325px;
+    list-style: none;
+}
+.latest_articles ul li {
+    width: 370px;
+    float: left;
+    margin-right: 95px;
+}
+.latest_articles ul li:nth-child(2) {
+    position: relative;
+    top: 56px; /* = transform: translateY(56px); */
+}
+.latest_articles ul li:last-child {
+    margin-right: 0;
+}
+.latest_articles ul:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+/* 
+ul 똑같이 했는데도 last child li 가 옆으로 올라오지 않아서 
+왜 그런가 했더니 ul 에 padding-rught 설정이 되어있어서 
+contents의 너비인 1300px을 넘어가서 넘치는 현상이었음 
+padding-right은 somehow rest.css 적용이 되어있지 않았음 
+reset.css 적용 후 problem solved ! 
+또한 about me의 사진도 강의와 달랐는데 
+그것도 reset.css 적용이 안돼서 생긴 문제였음
+!! 왜 안돼는지 원인을 파악하고 해결하는 노력을 하자 !!  
+*/
+
+.latest_articles ul li > img {
+    width: 100%;
+    margin-bottom: 28px;
+}
+.latest_articles ul li h3 {
+    font-size: 22px;
+    color: #ad7835;
+    position: relative;
+    margin-bottom: 25px;
+} 
+.latest_articles ul li h3:after {
+    content: " ";
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 39px;
+    border: 1px solid #ad7835;
+}
+.latest_articles ul li p {
+    margin-bottom: 23px;
+}
+.latest_articles ul li a {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ad7835
+}
+.latest_articles ul li a img {
+    margin-left: 18px;
 }
