@@ -134,3 +134,45 @@ header .slogan p {
     font-weight: bold;    
     text-transform: uppercase;
 }
+
+/* ----------------------- MAIN ----------------------- */
+.about_us {
+    background: #373737;
+    padding: 70px 67px 80px;
+    position: relative;
+    margin-bottom: 250px;
+}
+.about_us img {
+    position: absolute;
+    right: 63px;
+    top: -54px;
+}
+.main-tt {
+    color: #ad7835;
+    font-size: 60px;
+    line-height: 1; 
+    /* = line-heigh 60px 
+        라인하이트를 1로 하면 폰트 사이즈의 크기가 반영된다 */
+    position: relative;
+    margin-bottom: 32px;
+}
+.main-tt:after {
+    content: " ";
+    position: absolute;
+    width: 91px;
+    height: 3px;    
+    background: #ad7835;
+    left: 0;
+    top: calc(100% + 3px);
+}
+.about_us p {
+    width: 470px;
+    margin-bottom: 28px;
+}
+.about_us p:nth-of-type(2) {
+    margin-bottom: 47px;
+}
+/* nth-of child 를 쓰면 h2 또한 포함되기 때문에 nth-of-type 을 써야한다 */
+.about_us p:last-of-type {
+    margin-bottom: 0;
+}
