@@ -253,3 +253,81 @@ reset.css 적용 후 problem solved !
 .latest_articles ul li a img {
     margin-left: 18px;
 }
+
+
+/* ----------------------- CONTACT ----------------------- */
+.contact {
+    background: #373737;
+    padding: 65px 63px 55px;
+    position: relative;
+}
+.contact img {
+    position: absolute;
+    top: -54px;
+    left: 63px;
+}
+.contact form {
+    width: 470px;
+    margin-left: auto;
+}
+.contact form .field {
+    margin-bottom: 30px;
+}
+.contact form .field:last-of-type {
+    margin-bottom: 58px;
+}
+.contact form .field input {
+    width: 214px;
+    color: #fff;
+    box-sizing: border-box;
+}
+.contact form input:first-of-type {
+    float: left;
+}
+.contact form input:last-of-type {
+    float: right;
+}
+.contact form .field:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+.contact form textarea {
+    width: 100%;
+    display: block;
+    color: #fff;
+    height: 110px;
+}
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+    color: #fff;
+}
+/* placeholder 글씨 바꿔주기 */
+
+/* ----------------------- FOOTER ----------------------- */
+footer {
+    margin-top: 351px;
+    margin-bottom: 193px;
+}
+footer ul {
+    text-align: center;
+} 
+footer li {
+    display: inline-block;
+    margin: 0 13px;
+}
+footer li a {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #6b4922;
+    line-height: 78px;
+    box-sizing: border-box;
+    display: block;
+    color: #ad7835;
+    font-size: 28px;
+}
+footer li a:hover {
+    color: #fff;
+    background: #ad7835;
+}
+
